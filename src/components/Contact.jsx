@@ -17,9 +17,46 @@ const Contact = () => {
 
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e) => {};
+  const handleChange = (e) => {
+    const { name, value } = e.target;
 
-  const handleSubmit = (e) => {};
+    setForm({ ...form, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+    //service id, template id, api public key
+    emailjs
+      .send(
+        "service_qwgga5x",
+        "template_4lbousk",
+        {
+          from_name: form.name,
+          to_name: "Thirumurugan Sivalingam",
+          from_email: "thirumurugan82003@gmail.com",
+          message: form.message,
+        },
+        "fHWYuIZubjz6j95Kn"
+      )
+      .then(
+        () => {
+          setLoading(false);
+          alert("Thank you. I will get back to you as soon as possible");
+
+          setForm({
+            name: "",
+            email: "",
+            message: "",
+          });
+        },
+        (error) => {
+          setLoading(false);
+          console.log(error);
+          alert("Something went wrong");
+        }
+      );
+  };
 
   return (
     <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
@@ -88,4 +125,4 @@ const Contact = () => {
   );
 };
 
-export default SectionWrapper(Contact);
+export default SectionWrapper(Contact, "contact");

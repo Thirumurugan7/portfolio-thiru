@@ -12,6 +12,9 @@ import {
   StarsCanvas,
 } from "./components";
 
+//template_4lbousk
+//service_qwgga5x
+//fHWYuIZubjz6j95Kn
 const App = () => {
   return (
     <BrowserRouter>
