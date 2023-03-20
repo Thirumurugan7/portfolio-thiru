@@ -25,13 +25,20 @@ import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
-
+import limra from "./company/limra.jpeg";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import thirulogo from "./thirulogo.jpg";
+
+import ainftgen from "./ainftgen.png";
+import cardgame from "./cardgame.png";
+import host from "./host.png";
 export {
   logo,
+  ainftgen,
+  host,
+  cardgame,
   backend,
   creator,
   mobile,
@@ -60,4 +67,5 @@ export {
   jobit,
   tripguide,
   thirulogo,
+  limra,
 };
